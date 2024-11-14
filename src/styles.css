@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.page-transition {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  .page-transition.page-loaded {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .mat-toolbar {
+    background-color: #0078d4 !important; /* Azure blue */
+    color: white !important;
+  }
+  

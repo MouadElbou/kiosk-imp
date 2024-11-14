@@ -1,0 +1,30 @@
+.header-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0078d4; /* Azure blue color */
+  padding: 0 16px;
+  height: 43px;
+  border-right: 4px solid #0078d4;
+  border-top-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.header-title {
+  font-family: cursive;
+  font-weight: bold;
+  font-size: 24px;
+  color: #0078d4;
+  background-color: white; /* Slightly darker shade for contrast */
+  padding: 5px 16px;
+  border-radius: 20px; /* Makes the text area fully rounded */
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.2), /* Lighter inner shadow */
+  0px 2px 4px rgba(0, 0, 0, 0.15);         /* Outer shadow */
+}

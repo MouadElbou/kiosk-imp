@@ -1,0 +1,33 @@
+
+
+/* If used in a grid tile, make sure grid tile allows for height adjustment */
+mat-grid-tile {
+  display: flex; /* Allow grid tiles to use flexbox */
+  justify-content: stretch; /* Stretch child elements to fill the tile */
+  align-items: stretch; /* Stretch child elements to fill the tile */
+  height: 250px; /* Fixed height for all tiles */
+  overflow: hidden; /* Prevent overflow */
+  padding: 0; /* Remove padding for tiles */
+  margin: 0; /* Remove margin for tiles */
+  
+}
+mat-grid-list {
+  height: 250px; /* Fixed height for all tiles */
+  width: 100%; /* Make it full width */
+  max-width: 600px; /* Optional max-width */
+  margin: 0 auto; /* Center the grid list */
+}
+
+.margin-left {
+  margin-left: 20px; /* Adjust the value as needed */
+}
+.full-width-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Adjust if needed */
+}
+
+.container {
+  width: 80%; /* Or your desired width */
+}

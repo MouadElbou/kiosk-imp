@@ -1,0 +1,137 @@
+.progress-outer {
+    padding: 20px;               /* Padding around the outer container */
+    display: flex;               /* Enable flexbox */
+    justify-content: center;     /* Center items horizontally */
+    align-items: center;         /* Center items vertically */
+    height: 100vh;               /* Full height of the viewport (optional) */
+  }
+  
+  .progress-container {
+    max-width: 600px;           /* Set max width for the progress container */
+    margin: 0 auto;             /* Center container */
+    width: 80%;                  /* Set width for the container */
+  }
+  
+  .progress-bar-bg {
+    height: 40px;                /* Height of the background bar */
+    background: #e0e0e0;        /* Background color */
+    border-radius: 20px;        /* Rounded corners */
+    position: relative;          /* Positioning for inner elements */
+    overflow: hidden;           /* Hide overflow for inner bar */
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow effect */
+  }
+  
+  .progress-bar {
+    height: 100%;                /* Full height of the background bar */
+    background: linear-gradient(90deg, #3b82f6, #2563eb); /* Gradient background */
+    border-radius: 20px;        /* Rounded corners */
+    transition: width 100ms linear; /* Smooth transition for width change */
+  }
+  
+  .progress-bar.complete {
+    background: linear-gradient(90deg, #10b981, #059669); /* Gradient for complete state */
+  }
+  
+  .progress-text {
+    position: absolute;          /* Position relative to progress bar */
+    top: 50%;                   /* Center vertically */
+    left: 50%;                  /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for text height */
+    color: white;               /* Text color */
+    font-weight: bold;          /* Bold text */
+    font-size: 18px;            /* Font size */
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); /* Text shadow for readability */
+  }
+  
+  .scan-line {
+    position: absolute;          /* Position for scanning line */
+    top: 0;                      /* Align to the top */
+    left: 0;                     /* Align to the left */
+    right: 0;                    /* Align to the right */
+    bottom: 0;                   /* Align to the bottom */
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent); /* Scanning line effect */
+    animation: scan 2s linear infinite; /* Scanning animation */
+  }
+  
+  .scanning {
+    animation: pulse 2s infinite; /* Pulse animation when scanning */
+  }
+  
+  .check-icon {
+    display: inline-block;        /* Inline-block for icon */
+    margin-left: 5px;            /* Space between percentage and check icon */
+    animation: bounce 0.5s ease infinite; /* Bounce animation for the icon */
+  }
+  
+  .button-group {
+    margin-top: 20px;            /* Margin above button group */
+    display: flex;                /* Flex layout for buttons */
+    justify-content: center;      /* Center buttons horizontally */
+    gap: 10px;                   /* Space between buttons */
+  }
+  
+  .scan-button,
+  .reset-button {
+    padding: 10px 24px;         /* Padding for buttons */
+    border-radius: 25px;        /* Rounded corners for buttons */
+    font-weight: 600;           /* Bold font for buttons */
+    border: none;               /* Remove border */
+    cursor: pointer;            /* Pointer cursor on hover */
+    transition: all 0.2s;       /* Smooth transition effect */
+  }
+  
+  .scan-button {
+    background: #3b82f6;        /* Background color for scan button */
+    color: white;               /* Text color for scan button */
+  }
+  
+  .scan-button:hover:not(:disabled) {
+    background: #2563eb;        /* Darker background on hover */
+  }
+  
+  .reset-button {
+    background: #e0e0e0;        /* Background color for reset button */
+    color: #666;                /* Text color for reset button */
+  }
+  
+  .reset-button:hover:not(:disabled) {
+    background: #d0d0d0;        /* Darker background on hover */
+  }
+  
+  button:disabled {
+    opacity: 0.5;               /* Opacity for disabled buttons */
+    cursor: not-allowed;        /* Not allowed cursor for disabled buttons */
+  }
+  
+  /* Keyframe animations */
+  @keyframes scan {
+    from {
+      transform: translateX(-100%); /* Start position for scan animation */
+    }
+    to {
+      transform: translateX(100%); /* End position for scan animation */
+    }
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);        /* Original size */
+    }
+    50% {
+      transform: scale(1.02);     /* Slightly larger */
+    }
+    100% {
+      transform: scale(1);        /* Return to original size */
+    }
+  }
+  
+  @keyframes bounce {
+    0%,
+    100% {
+      transform: translateY(0);   /* Original position */
+    }
+    50% {
+      transform: translateY(-3px); /* Slightly higher position */
+    }
+  }
+  

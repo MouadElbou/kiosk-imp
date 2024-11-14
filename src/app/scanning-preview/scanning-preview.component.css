@@ -1,0 +1,50 @@
+.page-transition {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.example-card {
+  width: 100%;
+  max-width: 500px;
+}
+
+.mat-card-title {
+  text-align: center;
+  margin: 0;
+  padding: 16px 0;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.center-actions {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+width: 80rem;
+}
+
+.pdf-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  height: 100%; /* Ensure it takes the full height of the mat-card */
+}
+
+.pdf-viewer {
+  width: 100%; /* Optional: Set to fill the available width */
+  max-width: 400px; /* Maintain max width as before */
+  height: 20rem; /* Maintain the fixed height */
+
+}

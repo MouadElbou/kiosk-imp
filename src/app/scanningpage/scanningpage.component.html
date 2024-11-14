@@ -1,0 +1,38 @@
+<div class="page-transition" [class.page-loaded]="pageLoaded">
+  <mat-card class="example-card" appearance="outlined">
+    <mat-card-header> </mat-card-header>
+    <mat-card-title>Document Ready for Scanning</mat-card-title>
+    <mat-card-content>
+      <img
+        src="assets\Animation.gif"
+        alt="Scanner"
+        class="confirmation-image"
+        style="width: 30%; height: auto; margin: 16px"
+      />
+      <p>
+        Please ensure that your document is placed correctly on the scanner
+        before starting the scan.
+      </p>
+      <p>Here are the steps to follow:</p>
+      <ol style="text-align: start">
+        <li>Position the document face down on the scanner.</li>
+        <li>Close the scanner lid securely.</li>
+        <li>Adjust any settings you require (color, resolution).</li>
+        <li>Press 'Confirm' to start scanning.</li>
+      </ol>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button class="b1" color="warn" routerLink="home">
+        Back to Home
+      </button>
+      <button
+        mat-raised-button
+        class="b2"
+        color="primary"
+        [routerLink]="['/loading']"
+      >
+        Confirm
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

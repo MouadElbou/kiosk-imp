@@ -1,0 +1,21 @@
+<div class="progress-outer">
+    <div class="progress-container">
+      <!-- Background and progress bar -->
+      <div class="progress-bar-bg" [class.scanning]="isScanning">
+        <div
+          class="progress-bar"
+          [style.width.%]="progress"
+          [class.complete]="isComplete"
+        >
+          <div class="scan-line" *ngIf="isScanning"></div>
+        </div>
+        <!-- Percentage text -->
+        <div class="progress-text">
+          {{ progress.toFixed(0) }}%
+          <i class="check-icon" *ngIf="isComplete">✓</i>
+        </div>
+      </div>
+
+     
+    </div>
+  </div>

@@ -1,0 +1,24 @@
+<div class="page-transition" [class.page-loaded]="pageLoaded">
+  <div class="full-width-container">
+    <div class="container my-5">
+      <mat-grid-list cols="2" rowHeight="300px">
+        <!-- First Row -->
+        <mat-grid-tile>
+          <app-button-card title="Printing" description="Print your documents directly." icon="print"
+            routerLink="/printing">
+          </app-button-card>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+          <app-button-card title="Scanning" description="Easily scan your documents." icon="scanner"
+            routerLink="/scanning">
+          </app-button-card>
+        </mat-grid-tile>
+      </mat-grid-list>
+
+      <app-button-card [isRectangle]="true" title="Signing" description="Sign your documents securely."
+        icon="border_color">
+      </app-button-card>
+    </div>
+  </div>
+</div>

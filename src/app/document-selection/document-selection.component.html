@@ -1,0 +1,49 @@
+<div class="page-transition" [class.page-loaded]="pageLoaded">
+  <div class="document-selection-container">
+    <mat-card *ngIf="message" class="message-display">
+      <p>{{ message }}</p>
+    </mat-card>
+
+    <mat-card class="upload-section">
+      <mat-card-title>Select a Document</mat-card-title>
+      <mat-card-content>
+        <button mat-raised-button color="primary" (click)="openSourceDialog()">
+          Upload Document
+        </button>
+        <mat-error *ngIf="uploadError">{{ uploadError }}</mat-error>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card *ngIf="selectedDocument" class="preview-section">
+      <mat-card-title>
+        Document Preview
+        <button mat-icon-button (click)="removeSelectedDocument()" class="close-button">
+          <mat-icon>cancel</mat-icon>
+        </button>
+      </mat-card-title>
+      <mat-card-content>
+        <div class="preview-content">
+          <img *ngIf="isImageFile" [src]="selectedDocumentUrl" alt="Document Preview" />
+          <iframe *ngIf="isPdfFile" title="Preview" [src]="selectedDocumentUrl" width="100%" height="400px"></iframe>
+          <p *ngIf="isDocFile">Preview not available for DOCX files.</p>
+        </div>
+      </mat-card-content>
+    </mat-card>
+
+    <button mat-raised-button color="accent" *ngIf="selectedDocument" (click)="confirmSelection()">Confirm Document</button>
+
+    
+    
+    <!-- Display QR Code or USB prompt based on selection -->
+    <div *ngIf="showQRCode" >
+      <!-- Your QR code content here -->
+      <p>Scan this QR code to upload via phone.</p>
+    </div>
+    
+    <div *ngIf="showUSBPrompt">
+      <p>Please enter the USB path:</p>
+      <input matInput placeholder="USB Path" [(ngModel)]="usbPath" />
+    </div>
+    
+  </div>
+</div>
